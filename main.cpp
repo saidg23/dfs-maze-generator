@@ -10,12 +10,6 @@ struct Grid
     bool maze[41][41]{{false},{false}};
 };
 
-struct Cell
-{
-    int xpos = 0;
-    int ypos = 0;
-};
-
 void ShowConsoleCursor(bool showFlag)
 {
     HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -149,7 +143,6 @@ int main()
 
     srand(time(0));
     Grid grid;
-    Cell currentCell;
 
     drawMaze(grid, 1, 1);
 
